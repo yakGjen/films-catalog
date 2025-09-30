@@ -1,0 +1,17 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ film.title }}</mat-card-title>
+    <mat-card-subtitle>Premiere date {{ film.premiereDate }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="film.picture" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{ film.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button matButton (click)="like(true)">LIKE</button>
+    <button matButton (click)="like(false)">DISLIKE</button>
+  </mat-card-actions>
+</mat-card>
