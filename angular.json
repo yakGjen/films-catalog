@@ -31,7 +31,8 @@
             ],
             "styles": [
               "src/reset.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-spinner/animations/ball-spin-clockwise-fade.css"
             ]
           },
           "configurations": {
