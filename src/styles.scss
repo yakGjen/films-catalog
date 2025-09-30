@@ -35,5 +35,51 @@ body {
 }
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --border-color: #e2e8f0;
+}
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
+.main-wrap {
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+
+  @media (width >= 600px) {
+    
+  }
+
+  @media (min-width >= 600px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (width >= 768px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @media (width >= 992px) {
+    
+  }
+
+  @media (width >= 1200px) {
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
