@@ -1,6 +1,6 @@
 import { Component, effect, inject, Signal, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavComponent } from './components/nav.component/nav.component';
+import { NavComponent } from './components/nav/nav.component';
 import { NgxSpinnerComponent, NgxSpinnerService } from 'ngx-spinner';
 import { SpinnerService } from './services/spinner.service';
 
