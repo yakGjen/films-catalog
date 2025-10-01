@@ -4,4 +4,5 @@ export interface FilmInterface {
   description: string;
   premiereDate: Date;
   picture: string | null;
+  categories: string[];
 }

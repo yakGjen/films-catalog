@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+@include mat.chips-density(-2);
+
+:host {
+  max-width: 500px;
+}
+
+.card {
+  &__subtitle {
+    font-size: 12px;
+  }
+
+  &__img {
+    margin: 8px 0;
+  }
+
+  &__description-title {
+    font-weight: bold;
+  }
+
+  &__description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    text-overflow: ellipsis; 
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
