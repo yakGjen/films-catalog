@@ -1,1 +1,11 @@
-<p>films-catalog.component works!</p>
+<div class="catalog-header">
+  <h1 class="title catalog-header__title">Catalog of films</h1>
+
+  <div class="catalog-header__search"></div>
+</div>
+
+<div class="catalog">
+  @for (item of catalog$ | async; track $index; let first = $first) {
+    <app-film [film]="item" (onLike)="handleLike($event)"></app-film>
+  }
+</div>
