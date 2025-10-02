@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, output } from '@angular/core';
 import { FilmInterface } from './film.model';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +13,7 @@ import { MatChipsModule } from '@angular/material/chips';
 })
 export class FilmComponent {
   @Input() film!: FilmInterface;
-  @Output() onLike!: EventEmitter<boolean>;
+  readonly onLike = output<boolean>();
 
   like(trig: boolean): void {
     this.onLike.emit(trig);
