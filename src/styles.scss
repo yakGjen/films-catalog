@@ -1,5 +1,6 @@
 
 @use '@angular/material' as mat;
+@use 'ngx-toastr/toastr';
 
 html {
   @include mat.theme((
@@ -73,6 +74,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size: 24px;
   font-weight: bold;
 }
-
-// @include mat.chips-density(-2);
-
