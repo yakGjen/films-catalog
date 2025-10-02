@@ -5,6 +5,7 @@ import { FilmsCatalogService } from './films-catalog.service';
 import { finalize, Observable } from 'rxjs';
 import { SpinnerService } from '../../services/spinner.service';
 import { AsyncPipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-films-catalog',
@@ -15,6 +16,7 @@ import { AsyncPipe } from '@angular/common';
 export class FilmsCatalogComponent implements OnInit {
   private spinnerService = inject(SpinnerService);
   private filmsCatalogService = inject(FilmsCatalogService);
+  private toastr = inject(ToastrService);
   catalog: FilmInterface[] = [];
   catalog$!: Observable<FilmInterface[]>;
 
@@ -27,6 +29,6 @@ export class FilmsCatalogComponent implements OnInit {
   }
 
   handleLike(trig: boolean): void {
-    console.log(trig);
+    this.toastr.success(`Film was ${trig ? 'liked' : 'unliked'}`);
   }
 }
