@@ -1,9 +1,18 @@
 .catalog-header {
-  &__title {
-    margin-bottom: 24px;
-  }
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
   
-  &__search {}
+  &__search {
+    input {
+      outline: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: solid 1px #005cbb;
+    }
+  }
 }
 
 .catalog {
