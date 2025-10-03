@@ -1,0 +1,22 @@
+<mat-card appearance="outlined" class="popup">
+  <mat-card-header class="popup__header">
+    <mat-card-title-group>
+      <img mat-card-lg-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" class="popup__img">
+      <mat-card-title>{{ data.title }}</mat-card-title>
+      <mat-card-subtitle>Premiere date: {{ data.premiereDate | date:'dd/MM/yyyy' }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ data.description }}
+    </p>
+    <div class="popup__chips">
+      @for (item of data.categories; track $index; let first = $first) {
+        <mat-chip disabled="true">{{ item }}</mat-chip>
+      }
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="popup__btns">
+    <button matButton mat-dialog-close>Close</button>
+  </mat-card-actions>
+</mat-card>

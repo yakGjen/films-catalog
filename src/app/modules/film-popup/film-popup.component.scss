@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+@include mat.chips-density(-2);
+
+::ng-deep { 
+  .mat-mdc-card-title-group {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .mat-mdc-card-subtitle {
+    font-size: 12px;
+  }
+}
+
+.popup {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__img {
+    border-radius: 8px;
+  }
+
+  &__chips {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__btns {
+    justify-content: flex-end;
+  }
+}
