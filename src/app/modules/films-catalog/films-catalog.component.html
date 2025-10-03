@@ -8,7 +8,18 @@
 
 <div class="catalog">
   <!-- @for (item of catalog$ | async; track $index; let first = $first) { -->
-  @for (item of catalog$ | async | searchPipe: searchControl.value; track $index; let first = $first) {
+  @for (item of catalog$ | async | searchPipe: searchControl.value | slice: startIndex : endIndex; track $index; let first = $first) {
     <app-film [film]="item" (onLike)="handleLike($event)" (click)="openDialog('250ms', '250ms', item)"></app-film>
   }
+</div>
+<div>
+  <mat-paginator #paginator
+               (page)="handlePageEvent($event)"
+               [length]="length"
+               [pageSize]="pageSize"
+               [showFirstLastButtons]="true"
+               [hidePageSize]="true"
+               [pageIndex]="pageIndex"
+               aria-label="Select page">
+  </mat-paginator>
 </div>
