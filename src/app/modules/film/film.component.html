@@ -3,7 +3,7 @@
     <mat-card-title>{{ film.title }}</mat-card-title>
     <mat-card-subtitle class="card__subtitle">Premiere date: {{ film.premiereDate | date:'dd/MM/yyyy' }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="film.picture" class="card__img" alt="Photo of a film">
+  <img mat-card-image [src]="film.picture || 'https://material.angular.dev/assets/img/examples/shiba2.jpg'" class="card__img" alt="Photo of a film">
   <mat-card-content>
     <p class="card__description-title">Description:</p>
     <p class="card__description">
@@ -16,7 +16,7 @@
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button matButton (click)="like(true)">LIKE</button>
-    <button matButton (click)="like(false)">DISLIKE</button>
+    <button matButton (click)="like($event, true)">LIKE</button>
+    <button matButton (click)="like($event, false)">DISLIKE</button>
   </mat-card-actions>
 </mat-card>

@@ -6,12 +6,16 @@
 }
 
 .card {
+  cursor: pointer;
+  
   &__subtitle {
     font-size: 12px;
   }
 
   &__img {
     margin: 8px 0;
+    background-size: cover;
+    width: 100%;
   }
 
   &__description-title {
@@ -28,6 +32,7 @@
   }
 
   &__chips {
+    margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

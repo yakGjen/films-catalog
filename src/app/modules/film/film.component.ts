@@ -15,7 +15,8 @@ export class FilmComponent {
   @Input() film!: FilmInterface;
   readonly onLike = output<boolean>();
 
-  like(trig: boolean): void {
+  like(event: Event, trig: boolean): void {
+    event.stopPropagation();
     this.onLike.emit(trig);
   }
 }
