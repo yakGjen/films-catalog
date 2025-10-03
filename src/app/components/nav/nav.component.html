@@ -1,15 +1,15 @@
 <div class="main-wrap">
   <div class="nav nav_margin flex-line">
     <div class="flex-line">
-      <a routerLink="/">Home</a>
-      <a routerLink="/films">Films</a>
+      <a matButton routerLink="/">Home</a>
+      <a matButton routerLink="/films">Films</a>
     </div>
     <div class="flex-line">
       @if (authService.isLoggedIn()) {
         <div (click)="logout()">Log out</div>
       }
       @else {
-        <a routerLink="/login">Log in</a>
+        <a matButton routerLink="/login">Log in</a>
       }
     </div>
   </div>
