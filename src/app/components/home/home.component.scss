@@ -1,0 +1,27 @@
+.home {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    margin-bottom: 34px;
+    text-align: center;
+    font-size: 64px;
+    line-height: normal;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 16px;
+
+    &_mt {
+      margin-top: 36px;
+    }
+  }
+
+  &__link {
+    color: #005cbb;
+    text-decoration: none;
+  }
+}
